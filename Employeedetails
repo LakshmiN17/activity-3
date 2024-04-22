@@ -1,0 +1,48 @@
+package week1;
+class Empolyee
+{
+	String empName;
+	int empNo;
+	byte expYrs;
+	String gender;
+	double basicSalary;
+	double bouns;
+	double netsalary;
+	public void setEmpolyee(String Name,int no,byte exp,String sex,double basicsalary)
+	{
+		empName=Name;
+		empNo=no;
+		expYrs=exp;
+		gender=sex;
+		basicSalary=basicsalary;
+	}
+	public void getEmpolyeedetails()
+	{
+if (gender=="female")
+	{
+bouns=basicSalary*10/100;
+			netsalary=basicSalary+bouns;
+		}
+		else
+netsalary=basicSalary;
+		System.out.println(empName+"\t"+empNo+"\t"+expYrs+"\t"+gender+"\t"+basicSalary+"\t"+bouns+"\t"+ netsalary);
+
+	}
+}
+public class Empolyeedetails 
+{
+	public static void main(String[] args)
+	{
+		Empolyee rahul=new Empolyee();
+		rahul.setEmpolyee("Rashmi",128999,(byte)20,"female",10000.0d);
+		System.out.println("empName\tempNo\texpYrs\tgender\tbasicSalary\tbouns\tnetsalary");
+		rahul.getEmpolyeedetails();
+		Empolyee vishnu=new Empolyee();
+		vishnu.setEmpolyee("Vishnu", 25,(byte)5,"male",50000.0d);
+		vishnu.getEmpolyeedetails();
+		Empolyee anushree=new Empolyee();
+		anushree.setEmpolyee("Anusha",26,(byte)7,"female",15000.0d);
+		anushree.getEmpolyeedetails();
+	}
+
+}
